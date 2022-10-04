@@ -1,17 +1,17 @@
-
-const { mongoose, model, Schema} = require('mongoose');
-var uniqueValidator = require('mongoose-unique-validator');
+const { mongoose, model, Schema } = require('mongoose')
+var uniqueValidator = require('mongoose-unique-validator')
 
 const url = process.env.MONGODB_URI
 
 console.log('connecting to ', url)
 
 mongoose.connect(url)
-  .then( result => {
+  .then( (result) => {
+    console.log(result)
     console.log('connecting to MongoDB')
   })
   .catch( err => {
-    console.log('error to connecting to MongoDB', err.message);
+    console.log('error to connecting to MongoDB', err.message)
   })
 
 const personSchema = new Schema({
@@ -22,7 +22,7 @@ const personSchema = new Schema({
     trim: true,
     unique: true
   },
-  number: { 
+  number: {
     type: String,
     required: true,
     minlength: 8,
