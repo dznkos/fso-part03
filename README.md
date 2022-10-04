@@ -1,1 +1,1 @@
-https://backi-phonebook.herokuapp.com/api/persons
+backi-phonebook.herokuapp.com/api/persons
